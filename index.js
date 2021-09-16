@@ -50,3 +50,37 @@ function usdcny(usd) {
     return `${money} Chinese Yuan`;
 };
 console.log(usdcny(15));
+
+// 6.Write a function that checks if a given string (case insensitive) is a palindrome.
+
+function isPalindrome(x) {
+    const direct = x.toLowerCase();
+    const back = direct.split("").reverse().join("");
+    return direct === back;
+}
+
+console.log((isPalindrome("hello")));
+console.log((isPalindrome("abba")));
+
+// 7. The cockroach is one of the fastest insects. Write a function which takes its speed in km per hour
+//    and returns it in cm per second, rounded down to the integer (= floored).
+// For example:  1.08 --> 30
+
+function cockroachSpeed(s) {
+    return Math.floor(s * 1000 * 100  / (60 * 60));
+}
+
+console.log(cockroachSpeed(1.08), 30);
+
+// 8. Your function takes two arguments:
+// current father's age (years)
+// current age of his son (years)
+// Сalculate how many years ago the father was twice as old as his son
+// (or in how many years he will be twice as old).
+
+function twiceAsOld(dadYearsOld, sonYearsOld) {
+    return Math.abs(dadYearsOld - (sonYearsOld * 2));
+}
+
+console.log(twiceAsOld(36,7) , 22);
+console.log(twiceAsOld(55,30) , 5);
